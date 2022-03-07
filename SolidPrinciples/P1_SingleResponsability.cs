@@ -7,55 +7,56 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.SolidPrinciples.SingleResponsability
 {
-    class Journal
+    public class SingleResponsabilityPrinciple
     {
-        private readonly Dictionary<int, string> journalEntries = new Dictionary<int, string>();
-
-        private int numberOfEntries = 0;
-
-        public int AddJournalEntry(string journalEntry)
+        class Journal
         {
-            journalEntries.Add(++numberOfEntries, journalEntry);
-            return numberOfEntries;
-        }
+            private readonly Dictionary<int, string> journalEntries = new Dictionary<int, string>();
 
-        public void RemoveJournalEntry(int entryNumberToBeRemoved)
-        {
-            
-            for(int i = entryNumberToBeRemoved; i < numberOfEntries; i++)
+            private int numberOfEntries = 0;
+
+            public int AddJournalEntry(string journalEntry)
             {
-                journalEntries[i] = journalEntries[i + 1];
+                journalEntries.Add(++numberOfEntries, journalEntry);
+                return numberOfEntries;
             }
 
-            journalEntries.Remove(numberOfEntries);
-            numberOfEntries--;
-        }
-
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach(KeyValuePair<int,string> kp in journalEntries)
+            public void RemoveJournalEntry(int entryNumberToBeRemoved)
             {
-                sb.Append($"{kp.Key}: {kp.Value}" + "\n");
+
+                for (int i = entryNumberToBeRemoved; i < numberOfEntries; i++)
+                {
+                    journalEntries[i] = journalEntries[i + 1];
+                }
+
+                journalEntries.Remove(numberOfEntries);
+                numberOfEntries--;
             }
 
-            return sb.ToString().Substring(0, sb.Length - 1);
-        }
-    }
-
-    public class Persistence
-    {
-        public static void SaveToFile(Object journal, string fileName, bool overWrite = false)
-        {
-            if( overWrite || !File.Exists(fileName))
+            public override string ToString()
             {
-                File.WriteAllText(fileName, journal.ToString());
+                StringBuilder sb = new StringBuilder();
+                foreach (KeyValuePair<int, string> kp in journalEntries)
+                {
+                    sb.Append($"{kp.Key}: {kp.Value}" + "\n");
+                }
+
+                return sb.ToString().Substring(0, sb.Length - 1);
             }
         }
-    }
 
-    public class Demo
-    {
+        public class Persistence
+        {
+            public static void SaveToFile(Object journal, string fileName, bool overWrite = false)
+            {
+                if (overWrite || !File.Exists(fileName))
+                {
+                    File.WriteAllText(fileName, journal.ToString());
+                }
+            }
+        }
+
+
         static void Main(string[] args)
         {
             Journal j = new Journal();
@@ -68,6 +69,9 @@ namespace DesignPatterns.SolidPrinciples.SingleResponsability
             Console.ReadLine();
         }
 
+
     }
-    
+
+
+
 }
