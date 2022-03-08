@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.SolidPrinciples.SingleResponsability
+namespace DesignPatterns.SolidPrinciples.SingleResponsabilityPrinciple
 {
     public class NotSingleResponsabilityPrinciple
     {

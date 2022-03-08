@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DesignPatterns.SolidPrinciples.OpenClosedPrinciple.NotOpenClosedPrinciple</StartupObject>
+    <StartupObject>DesignPatterns.SolidPrinciples.LiskovSubstitutionPrinciple.NotLiskovSubstitutionPrinciple</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,8 +63,10 @@
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SolidPrinciples\P1_NotSingleResponsability.cs" />
-    <Compile Include="SolidPrinciples\P1_SingleResponsability.cs" />
+    <Compile Include="SolidPrinciples\P3_LiskovSubstitutionPrinciple.cs" />
+    <Compile Include="SolidPrinciples\P3_NotLiskovSubstitutionPrinciple.cs" />
+    <Compile Include="SolidPrinciples\P1_NotSingleResponsabilityPrinciple.cs" />
+    <Compile Include="SolidPrinciples\P1_SingleResponsabilityPrinciple.cs" />
     <Compile Include="SolidPrinciples\P2_NotOpenClosedPrinciple.cs" />
     <Compile Include="SolidPrinciples\P2_OpenClosedPrinciple.cs" />
   </ItemGroup>
