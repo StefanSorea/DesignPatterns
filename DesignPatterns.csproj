@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DesignPatterns.CreationalDesignPatterns.Builder.HtmlBuilder.Demo</StartupObject>
+    <StartupObject>DesignPatterns.CreationalDesignPatterns.Builder.FluentBuilderWithInheritance.FluentBuilderWithInheritance</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="CreationalDesignPatterns\Builder\B2_HtmlBuilder.cs" />
     <Compile Include="CreationalDesignPatterns\Builder\B1_FirstStep.cs" />
+    <Compile Include="CreationalDesignPatterns\Builder\B3_FluentBuilderInheritance.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolidPrinciples\P2_OpenClosedPrinciple.cs" />

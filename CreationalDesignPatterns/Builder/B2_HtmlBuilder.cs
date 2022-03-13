@@ -109,7 +109,9 @@ namespace DesignPatterns.CreationalDesignPatterns.Builder.HtmlBuilder
             Console.WriteLine(htmlBuilder.ToString());
 
             // fluent builder
-            htmlBuilder.ClearInnerHtml(); // disengage builder from the object it's building (but preserve it's root element => if you want to have a different root element, you need to create a new HtmlBuilder), then...
+
+            // disengage builder from the object it's building (but preserve it's root element => if you want to have a different root element, you need to create a new HtmlBuilder), then...
+            htmlBuilder.ClearInnerHtml();
 
             htmlBuilder
                 .AddChildFluent("li", "hello")
