@@ -64,6 +64,9 @@
     <Compile Include="CreationalDesignPatterns\Builder\B2_HtmlBuilder.cs" />
     <Compile Include="CreationalDesignPatterns\Builder\B1_FirstStep.cs" />
     <Compile Include="CreationalDesignPatterns\Builder\B3_FluentBuilderInheritance.cs" />
+    <Compile Include="CreationalDesignPatterns\Builder\B4_FunctionalBuilderV3.cs" />
+    <Compile Include="CreationalDesignPatterns\Builder\B4_FunctionalBuilderV2.cs" />
+    <Compile Include="CreationalDesignPatterns\Builder\B4_FunctionalBuilderV1.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolidPrinciples\P2_OpenClosedPrinciple.cs" />

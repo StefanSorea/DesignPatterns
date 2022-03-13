@@ -79,12 +79,34 @@ namespace DesignPatterns.CreationalDesignPatterns.Builder.FluentBuilderWithInher
 
         public static void Main(string[] args)
         {
-            var p = Person.New
+            Person p = Person.New
               .Called("Stefan")
               .WorksAsA("Dev")
               .Born(DateTime.UtcNow)
               .Build();
             Console.WriteLine(p);
+
+            // This has been added for debug purposes to better understand the mechanism, HOVER over var:
+            Console.WriteLine();
+
+            Person.Builder p0 = Person.New;
+            Console.WriteLine($"{nameof(p0)}:{p0.GetType().Name}");
+
+            var p1 = p0.Called("Debugger");
+            Console.WriteLine($"{nameof(p1)}:{p1.GetType().Name}");
+
+            var p2 = p1.WorksAsA("Magic");
+            Console.WriteLine($"{nameof(p2)}:{p2.GetType().Name}");
+
+            var p3 = p2.Born(DateTime.UtcNow);
+            Console.WriteLine($"{nameof(p3)}:{p3.GetType().Name}");
+
+            var p4 = p3.Build();
+            Console.WriteLine($"{nameof(p4)}:{p4.GetType().Name}");
+
+
+            Console.WriteLine();
+            Console.WriteLine(p4);
             Console.ReadLine();
         }
 
